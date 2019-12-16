@@ -3,7 +3,7 @@ package com.roccorichie.bikeregistryservice.models;
 import java.math.BigDecimal;
 import java.sql.Date;
 
-public class bike {
+public class Bike {
     private String name;
     private String email;
     private String phone;
