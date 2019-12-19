@@ -1,20 +1,5 @@
 -- Create Database if Not Exists
-DO
-$do$
-    BEGIN
-        IF NOT EXISTS(
-                SELECT datname
-                FROM pg_catalog.pg_database
-                WHERE datname = 'bike-registry') THEN
-            CREATE DATABASE "bike-registry"
-                WITH
-                OWNER = postgres
-                ENCODING = 'UTF8'
-                CONNECTION LIMIT = -1;
-        END IF;
-    END
-$do$
-LANGUAGE plpgsql;
+-- Create Database manually or use createdb binary provided by Postgres
 
 -- Create User bike-admin if Not Exists
 DO
